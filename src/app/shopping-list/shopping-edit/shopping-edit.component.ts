@@ -10,7 +10,7 @@ export class ShoppingEditComponent implements OnInit {
 
   @ViewChild('nameInput') nameRef:ElementRef;
   @ViewChild('amountInput') amountRef:ElementRef;
-  @Output() ingredientAdded= new EventEmitter<Ingredient>();
+ // @Output() ingredientAdded= new EventEmitter<Ingredient>();
   
 
   constructor() { }
@@ -22,7 +22,7 @@ export class ShoppingEditComponent implements OnInit {
     const ingName=this.nameRef.nativeElement.value;
     const ingAmount=this.amountRef.nativeElement.value;
     const newIngredient=new Ingredient(ingName, ingAmount);
-    this.ingredientAdded.emit(newIngredient);
+    //this.ingredientAdded.emit(newIngredient);
   }
 
 }
